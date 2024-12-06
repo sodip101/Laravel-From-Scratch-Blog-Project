@@ -84,8 +84,8 @@ jobs:
          # Extract the path of the php.ini file
           PHP_INI=$(php --ini | grep "Loaded Configuration File" | awk '{print $4}')
           echo "$PHP_INI"
-          echo "curl.cainfo=/etc/ssl/certs/pse.pem" | sudo tee -a "$PHP_INI"
-          echo "openssl.cafile=/etc/ssl/certs/pse.pem" | sudo tee -a "$PHP_INI"
+          echo "curl.cainfo=/etc/ssl/certs/pse.pem" | tee -a "$PHP_INI"
+          echo "openssl.cafile=/etc/ssl/certs/pse.pem" | tee -a "$PHP_INI"
     - name: Install project dependencies
       run: composer install --no-scripts --no-autoloader --prefer-dist --no-cache
     # - name: Install dependencies
