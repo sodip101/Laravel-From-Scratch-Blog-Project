@@ -90,7 +90,8 @@ jobs:
     #   run: composer install --no-scripts --no-autoloader --prefer-dist --no-cache
     - name: Install dependencies
       run: |
-          composer config --global disable-tls true
+          composer config --global cafile /path/to/cacert.pem
           composer config --global secure-http false
+          composer config --global disable-tls true
           composer install --ignore-platform-reqs --no-scripts --no-autoloader --prefer-dist --no-cache
 
