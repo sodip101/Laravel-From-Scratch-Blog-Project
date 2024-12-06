@@ -80,5 +80,7 @@ jobs:
     - name: Checkout the code
       uses: actions/checkout@v3
     - name: Install dependencies
-      run: composer install --no-plugins --no-scripts --ignore-platform-reqs
+      run: composer config --global disable-tls true
+      run: composer config --global secure-http false
+      run: composer install --ignore-platform-reqs --no-scripts
 
