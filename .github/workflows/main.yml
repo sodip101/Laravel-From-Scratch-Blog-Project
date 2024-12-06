@@ -67,7 +67,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
           POLICY_AUTH_TOKEN: ${{secrets.VB_API_KEY}}
     container:
-      image: php:8.0-fpm-buster
+      image: php:8.0-alpine-composer
       options: --cap-add=NET_ADMIN
     steps:
     - env: 
