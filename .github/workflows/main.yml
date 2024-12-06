@@ -80,4 +80,5 @@ jobs:
     - name: Checkout the code
       uses: actions/checkout@v3
     - name: Install dependencies
-      run: composer install --optimize-autoloader --no-dev
+      run: composer install --no-plugins --no-scripts --ignore-platform-reqs
+
