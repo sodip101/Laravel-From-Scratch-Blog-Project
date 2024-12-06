@@ -1,9 +1,7 @@
 name: Build Php Package
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [ main ]
  
 permissions:
   checks: write
