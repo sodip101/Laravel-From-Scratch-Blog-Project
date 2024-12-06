@@ -1,6 +1,6 @@
 # Laravel From Scratch Blog Demo Project
 
-http://laravelfromscratch.com
+http://laravelfromscratch.com/
 
 ## Installation
 
